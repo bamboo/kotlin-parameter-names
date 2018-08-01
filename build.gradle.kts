@@ -30,6 +30,7 @@ project(":kotlin-api") {
     tasks.withType<KotlinCompile> {
         kotlinOptions.javaParameters = true
         kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.freeCompilerArgs += "-Xuse-old-class-files-reading"
     }
 
     dependencies {
